@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | ENGLISH KILLER WEB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Login</h1>
+  <div class="form-container">
+    <form id="loginForm">
+  <input type="text" id="loginUsername" placeholder="Username" required autocomplete="username"><br>
+  <input type="password" id="loginPassword" placeholder="Password" required autocomplete="current-password"><br>
+      <button type="submit">Login</button>
+    </form>
+    <div style="margin-top:1em;">
+      <span class="link" onclick="showRegister()">Create Account</span>
+    </div>
+    <div id="loginMsg"></div>
+  </div>
+  <div class="form-container" id="registerContainer" style="display:none;">
+    <h2>Register</h2>
+    <form id="registerForm">
+  <input type="text" id="registerUsername" placeholder="Username" required autocomplete="username"><br>
+  <input type="password" id="registerPassword" placeholder="Password" required autocomplete="new-password"><br>
+      <button type="submit">Register</button>
+    </form>
+    <div style="margin-top:1em;">
+      <span class="link" onclick="hideRegister()">Back to Login</span>
+    </div>
+    <div id="registerMsg"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

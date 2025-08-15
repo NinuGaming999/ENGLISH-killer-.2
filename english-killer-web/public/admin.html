@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin | ENGLISH KILLER WEB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+  <div class="admin-section">
+    <h2>Zoom Meeting Link</h2>
+    <form id="zoomForm">
+      <input type="text" id="zoomLink" placeholder="Zoom Meeting Link" required>
+      <button type="submit">Update Link</button>
+    </form>
+    <div id="zoomMsg"></div>
+  </div>
+  <div class="admin-section">
+    <h2>MCQ Management</h2>
+    <form id="mcqForm" autocomplete="off" style="display: flex; flex-direction: column; align-items: center; gap: 0.7em; max-width: 500px; margin: 0 auto;">
+      <label style="width:100%;text-align:left;">Question:
+        <textarea id="mcqQuestion" placeholder="Enter question here" required style="width:100%;min-height:50px;resize:vertical;"></textarea>
+      </label>
+      <label style="width:100%;text-align:left;">Option 1:
+        <input type="text" id="mcqOption0" placeholder="Option 1" required style="width:100%;">
+      </label>
+      <label style="width:100%;text-align:left;">Option 2:
+        <input type="text" id="mcqOption1" placeholder="Option 2" required style="width:100%;">
+      </label>
+      <label style="width:100%;text-align:left;">Option 3:
+        <input type="text" id="mcqOption2" placeholder="Option 3" required style="width:100%;">
+      </label>
+      <label style="width:100%;text-align:left;">Option 4:
+        <input type="text" id="mcqOption3" placeholder="Option 4" required style="width:100%;">
+      </label>
+      <label style="width:100%;text-align:left;">Correct Option:
+        <select id="mcqAnswer" required style="width:100%;">
+          <option value="">Select correct option</option>
+          <option value="0">Option 1</option>
+          <option value="1">Option 2</option>
+          <option value="2">Option 3</option>
+          <option value="3">Option 4</option>
+        </select>
+      </label>
+      <button type="submit" style="width:100%;">Add MCQ</button>
+    </form>
+    <div id="mcqMsg"></div>
+    <div id="mcqList"></div>
+  </div>
+  <div class="admin-section">
+    <h2>Study Materials</h2>
+    <form id="materialForm">
+      <input type="text" id="materialTitle" placeholder="Title" required><br>
+      <input type="text" id="materialUrl" placeholder="PDF URL" required><br>
+      <button type="submit">Add Material</button>
+    </form>
+    <div id="materialMsg"></div>
+    <div id="materialList"></div>
+  </div>
+  <div class="admin-section">
+    <h2>All Users</h2>
+    <div id="userList"></div>
+  </div>
+  <div style="margin:2em;">
+    <button onclick="location.href='index.html'">Logout</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
